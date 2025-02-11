@@ -1,7 +1,7 @@
 :root {
     --primary-color: #CA7D2B;
     --secondary-color: #841C26;
-    --accent1-color: 34, 55, 109;
+    --accent1-color: rgb(34, 55, 109);
     --accent2-color: #177E89;
     --heading-font: 'Passero One';
     --body-font: 'Poiret One';
@@ -16,6 +16,7 @@ body {
 h1, h2 {
     font-family: var(--heading-font);
     color: var(--primary-color);
+    z-index: 1;
 }
 
 h1 {
@@ -31,6 +32,7 @@ p {
     font-size: 1rem;
     color: var(--text-color);
     font-family: var(--body-font);
+    z-index: 1;
 }
 
 .hero {
@@ -50,6 +52,11 @@ p {
     left: 50%;
     transform: translateX(-50%);
     color: white;
+}
+
+.hero p {
+    color: white;
+    z-index: 1;
 }
 
 .sociallinks a {
