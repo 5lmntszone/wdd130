@@ -26,7 +26,7 @@ header img {
     list-style: none;
     padding: 0;
     margin: 0;
-    font-family: Passero One;
+    font-family: var(--heading-font);
 }
 
 .navigation li {
@@ -48,7 +48,7 @@ header img {
 
 h1 {
 	font-size: 2rem;
-	font-family: Passero One, sans-serif;
+	font-family: var(--heading-font), sans-serif;
 }
 
 body {
@@ -86,7 +86,7 @@ body {
     flex: 2;
     margin-right: 20px;
     color: black;
-    font-family: Poiret One;
+    font-family: var(--body-font);
 }
 
 .description img {
@@ -104,6 +104,7 @@ body {
 .history h2 {
     font-size: 2em;
     margin-bottom: 20px;
+    font-family: var(--heading-font);
 }
 
 .history-content {
@@ -130,10 +131,73 @@ body {
     align-items: center;
 }
 
+.adventure {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.adventure h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-family: var(--heading-font);
+}
+
+.adventure-gallery {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 5px;
+    max-width: 1400px;
+    margin: 0 auto;
+    overflow-x: auto;
+}
+
+.adventure-gallery figure {
+    flex: 0 1 300px;
+    max-width: 400px;
+    text-align: center;
+}
+
+.adventure-gallery img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.adventure-gallery figcaption {
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--accent2-color);
+    color: white;
+    position: relative;
+}
+
+footer p {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    white-space: nowrap;
+}
+
+.sociallinks {
+    display: flex;
+    gap: 15px;
+    margin-left: auto;
+}
+
 .sociallinks a {
     text-decoration: none;
 }
 
 .sociallinks img {
     width: 50px;
+    height: auto;
 }
