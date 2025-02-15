@@ -59,7 +59,10 @@ body {
 
 .hero {
     min-height: 400px;
-    background: url('https://5lmntszone.github.io/wdd130/wwr/images/lake2.webp') no-repeat center center/cover;
+    background-image: url('/images/lake2.webp');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;    
     text-align: center;
     padding: 50px 20px;
     color: white;
