@@ -1,6 +1,6 @@
 :root {
     --primary-color: #CA7D2B;
-    --secondary-color: #841C26;
+    --secondary-color: tomato;
     --accent1-color: 34, 55, 109;
     --accent2-color: #177E89;
     --heading-font: 'Passero One';
@@ -42,7 +42,7 @@ header img {
 }
 
 .navigation a:hover {
-	color: tomato;
+	color: var(--secondary-color);
 	text-decoration: none;
 }
 
@@ -59,7 +59,7 @@ body {
 
 .hero {
     min-height: 400px;
-    background: url('/images/lake2.jpg') no-repeat center center/cover;
+    background: url('/images/lake2.webp') no-repeat center center/cover;
     text-align: center;
     padding: 50px 20px;
     color: white;
@@ -87,6 +87,7 @@ body {
     margin-right: 20px;
     color: black;
     font-family: var(--body-font);
+    text-align: center;
 }
 
 .description img {
@@ -105,6 +106,7 @@ body {
     font-size: 2em;
     margin-bottom: 20px;
     font-family: var(--heading-font);
+    color: var(--primary-color);
 }
 
 .history-content {
@@ -119,6 +121,8 @@ body {
 .history-content p {
     flex: 1;
     padding: 10px;
+    text-align: start;
+    font-family: var(--body-font);
 }
 
 .history-content img {
@@ -140,6 +144,7 @@ body {
     font-size: 2em;
     margin-bottom: 20px;
     font-family: var(--heading-font);
+    color: var(--primary-color);
 }
 
 .adventure-gallery {
@@ -168,6 +173,8 @@ body {
 .adventure-gallery figcaption {
     margin-top: 10px;
     font-size: 1.1rem;
+    font-family: var(--body-font);
+    font-weight: bold;
 }
 
 footer {
