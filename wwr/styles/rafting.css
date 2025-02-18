@@ -1,8 +1,8 @@
 :root {
-    --primary-color: #CA7D2B;
+    --primary-color: #df8a30;
     --secondary-color: tomato;
-    --accent1-color: 34, 55, 109;
-    --accent2-color: #177E89;
+    --accent1-color: #10437a;
+    --accent2-color: #218abb;
     --heading-font: 'Passero One';
     --body-font: 'Poiret One';
     --text-color: #333;
@@ -13,6 +13,11 @@ header {
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
     padding: 10px 20px;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 header img {
@@ -35,7 +40,7 @@ header img {
 
 .navigation a {
 	display: block;
-	color: navy;
+	color: var(--accent1-color);
 	padding: 20px;
 	text-decoration: none;
 	font-size: 1.2rem;
@@ -183,18 +188,32 @@ body {
 footer {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 20px;
-    background-color: var(--accent2-color);
+    background-color: var(--secondary-color);
     color: white;
     position: relative;
+    flex-wrap: wrap;
 }
 
-footer p {
+.footer-text {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    margin: 0;
+    text-align: center;
     white-space: nowrap;
+}
+
+.footer-text a {
+    color: #FFD700; 
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    margin-top: 5px;
+}
+
+.footer-text a:hover {
+    text-decoration: underline;
 }
 
 .sociallinks {
@@ -211,3 +230,187 @@ footer p {
     width: 50px;
     height: auto;
 }
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+.employee-profiles, .contact-form {
+    margin-bottom: 30px;
+}
+
+.employee-img {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem;
+    align-items: center;
+}
+
+.employee-profiles h2 {
+    text-align: center;
+    color: var(--accent2-color);
+    font-family: var(--heading-font);
+    font-size: 2.3rem;
+}
+
+.employee-img img {
+    border-radius: 50%;
+    margin: 1rem;
+    max-width: 300px;
+    height: auto;
+}
+
+.employee-img div {
+    text-align: center;
+}
+
+.employee-img p {
+    font-family: var(--body-font);
+    font-size: 23px;
+    color: black;
+    font-weight: bold;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: var(--body-font);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    font-family: var(--body-font);
+    font-size: 16px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: black;
+    width: 100%;
+    font-family: var(--body-font);
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.form-group input[type="radio"] {
+    display: flex;
+    margin-right: 5px;
+}
+
+.form-group input[type="checkbox"] {
+    margin-right: 5px;
+    width: 22px;
+    height: 22px;
+    margin-bottom: 13px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: var(--accent1-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    font-family: var(--body-font);
+    font-weight: bold;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, textarea, button {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+button {
+    background-color: var(--accent2-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+.company-info {
+    width: 100%;
+    margin: 40px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.company-info h2 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.company-info p {
+    color: #555;
+    font-size: 16px;
+    margin: 10px;
+    font-weight: 500;
+}
+
+.company-info iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.company-info h2 {
+    font-size: 24px;
+    font-family: var(--heading-font);
+    color: var(--accent2-color);
+}
+
+.company-info p {
+    font-size: 16px;
+    font-family: var(--body-font);
+    color: black;
+    margin-bottom: 15px;
+}
+
+
+
