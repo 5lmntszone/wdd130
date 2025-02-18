@@ -196,6 +196,14 @@ footer {
     flex-wrap: wrap;
 }
 
+footer p {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    white-space: nowrap;
+}
+
 .footer-text {
     position: absolute;
     left: 50%;
