@@ -3,15 +3,35 @@
     --secondary-color: tomato;
     --accent1-color: #10437a;
     --accent2-color: #218abb;
+    --accent3-color: #f9f9f9;
     --heading-font: 'Passero One';
     --body-font: 'Poiret One';
-    --text-color: #333;
+    --text-color: black;
+}
+
+body {
+    font-family: var(--body-font);
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 80%; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
 header {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
+    text-align: center;
     padding: 10px 20px;
     background-color: white;
     position: sticky;
@@ -23,6 +43,7 @@ header {
 header img {
     height: 100px;
     justify-self: right;
+    max-width: 100%;
 }
 
 .navigation {
@@ -43,7 +64,7 @@ header img {
 	color: var(--accent1-color);
 	padding: 20px;
 	text-decoration: none;
-	font-size: 1.2rem;
+	font-size: 1.6rem;
 }
 
 .navigation a:hover {
@@ -56,12 +77,6 @@ h1 {
 	font-family: var(--heading-font), sans-serif;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
 .hero {
     min-height: 400px;
     background-image: url("../images/lake2.webp") !important;
@@ -71,11 +86,162 @@ body {
     text-align: center;
     padding: 50px 20px;
     color: white;
+    max-width: 100%;
 }
 
 .hero h1 {
     font-size: 2em;
     margin-bottom: 20px;
+}
+
+.hero1 {
+    min-height: 400px;
+    background-image: url("../images/lake1.png") !important;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;    
+    text-align: center;
+    padding: 50px 20px;
+    color: white;
+    max-width: 100%;
+}
+
+.hero1 h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero1 h2 {
+    font-family: var(--heading-font);
+}
+
+.hero1 h3 {
+    font-family: var(--body-font);
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta {
+    text-align: center;
+    padding: 30px;
+    background-color: var(--accent1-color);
+    color: white;
+    box-shadow: 0 0 25px rgba(10, 145, 179, 0.9);
+    max-width: 80%;
+    margin: 20px auto;
+    border-radius: 10px;
+    font-family: var(--body-font);
+    font-size: 25px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: var(--accent2-color);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-family: var(--heading-font);
+}
+
+.cta-button:hover {
+    background: var(--secondary-color);
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px;
+    align-items: center;
+    width: 94%;
+    max-width: 100%;
+}
+
+.newsletter {
+    text-align: center;
+    padding: 30px;
+    background: var(--secondary-color);
+    color: white;
+    border-radius: 10px;
+    width: 50%;
+    max-width: 100%;
+    margin-bottom: 30px;
+}
+
+.newsletter form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newsletter input, .newsletter button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 300px;
+}
+
+.newsletter button {
+    background: var(--accent1-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.newsletter button:hover {
+    background: var(--accent2-color);
+}
+
+.rafting-options {
+    width: 100%;
+    align-items: center;
+}
+
+.rafting-options h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--accent2-color);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    text-align: center;
+    max-width: 100%;
+    margin: 25px;
+}
+
+.grid-item img {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item h2 {
+    font-family: var(--heading-font);
+    font-size: 1.7rem;
+    color: var(--accent1-color);
+}
+
+.grid-item p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    font-family: var(--body-font);
+    text-align: center;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
 }
 
 .description {
@@ -190,19 +356,21 @@ footer {
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    background-color: var(--secondary-color);
+    background-color: var(--accent1-color);
     color: white;
     position: relative;
     flex-wrap: wrap;
+    max-width: 100%;
+    overflow: hidden;
 }
 
-footer p {
+/* footer p {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
     white-space: nowrap;
-}
+} */
 
 .footer-text {
     position: absolute;
@@ -213,7 +381,7 @@ footer p {
 }
 
 .footer-text a {
-    color: #FFD700; 
+    color: var(--secondary-color); 
     text-decoration: none;
     font-weight: bold;
     display: block;
@@ -239,11 +407,7 @@ footer p {
     height: auto;
 }
 
-.container {
-    width: 80%;
-    margin: auto;
-    padding: 20px;
-}
+/* Contact Page */
 
 .employee-profiles, .contact-form {
     margin-bottom: 30px;
@@ -285,7 +449,7 @@ footer p {
     max-width: 600px;
     margin: 40px auto;
     padding: 20px;
-    background: #f9f9f9;
+    background: var(--accent3-color);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -352,7 +516,7 @@ button {
 }
 
 button:hover {
-    background: #0056b3;
+    background: var(--accent1-color);
 }
 
 label {
@@ -381,7 +545,7 @@ button:hover {
     width: 100%;
     margin: 40px auto;
     padding: 20px;
-    background: #f9f9f9;
+    background: var(--accent3-color);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -420,5 +584,109 @@ button:hover {
     margin-bottom: 15px;
 }
 
+/* Trips Page */
+
+.trip-descriptions {
+    max-width: 100%;
+    align-items: center;
+}
+
+.trip-descriptions h2 {
+    text-align: center;
+    margin-top: 70px;
+    font-size: 2rem;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.trip-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    max-width: 960px;
+    gap: 20px;
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.trip {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.trip img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.trip h3 {
+    font-family: var(--heading-font);
+    font-size: 1.7rem;
+    color: var(--accent1-color);
+}
+
+.trip p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    font-family: var(--body-font);
+    text-align: center;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+}
+
+.trip-table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.trip-table h2 {
+    text-align: center;
+    margin-top: 70px;
+    font-size: 2rem;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+
+.trip-container table {
+    width: 100%;
+    max-width: 1500px;
+    border-collapse: collapse;
+    margin: 0 auto;
+    background-color: var(--primary-color);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.trip-container th, .trip-container td {
+    padding: 15px;
+    border: 1px solid var(--accent1-color);
+    font-family: var(--body-font);
+    color: var(--text-color);
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.trip-container th {
+    background-color: var(--accent1-color);
+    color: white;
+}
+
+.trip-container tr:nth-child(even) {
+    background-color: var(--accent3-color);
+}
 
 
