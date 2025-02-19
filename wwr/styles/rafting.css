@@ -1,8 +1,8 @@
 :root {
     --primary-color: #cc761a;
-    --secondary-color: tomato;
+    --secondary-color: rgb(243, 72, 42);
     --accent1-color: #10437a;
-    --accent2-color: #218abb;
+    --accent2-color: #0a7fb6;
     --accent3-color: #f9f9f9;
     --heading-font: 'Passero One';
     --body-font: 'Poiret One';
@@ -120,6 +120,15 @@ h1 {
     width: 70%;
     margin-left: auto;
     margin-right: auto;
+}
+
+.purpose {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 70%;
+    margin: 40px auto;
 }
 
 .cta {
@@ -381,7 +390,7 @@ footer {
 }
 
 .footer-text a {
-    color: var(--secondary-color); 
+    color: lightblue; 
     text-decoration: none;
     font-weight: bold;
     display: block;
