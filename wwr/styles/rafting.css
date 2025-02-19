@@ -364,13 +364,13 @@ footer {
     overflow: hidden;
 }
 
-/* footer p {
+.normal-footer p {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
     white-space: nowrap;
-} */
+} 
 
 .footer-text {
     position: absolute;
