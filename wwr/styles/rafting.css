@@ -2,7 +2,7 @@
     --primary-color: #cc761a;
     --secondary-color: rgb(243, 72, 42);
     --accent1-color: #10437a;
-    --accent2-color: #0a7fb6;
+    --accent2-color: #056c9c;
     --accent3-color: #f9f9f9;
     --heading-font: 'Passero One';
     --body-font: 'Poiret One';
@@ -429,7 +429,7 @@ footer {
     align-items: center;
 }
 
-.employee-profiles h2 {
+.employee-profiles h1 {
     text-align: center;
     color: var(--accent2-color);
     font-family: var(--heading-font);
@@ -696,6 +696,12 @@ button:hover {
 
 .trip-container tr:nth-child(even) {
     background-color: var(--accent3-color);
+}
+
+.google-map {
+    width: 100px; 
+    height: 300px; 
+    border: 0;
 }
 
 
